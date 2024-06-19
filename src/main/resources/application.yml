@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: invoice-extract
+        
+  datasource:
+    url: jdbc:postgresql://localhost:5432/invoice-extract
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+server:
+  port: 8080
+
+app:
+  
+  headers: >
+    ORDEN DE COMPRA NO,
+    FECHA DE COMPRA,
+    ORDEN ELAB. POR,
+    EMAIL ELAB POR,
+    FECHA ENTREGA,
+    NO. DE PROYECTO,
+    PLAZO DE PAGO,
+    INFORMACION DE PROVEEDOR,
+    PROVEEDOR SAP\LEGACY,
+    LUGAR DE ENTREGA,
+    TELEFONO,
+    FAX,
+    REFERENCIA #,
+    GRUPO DE COMPRAS,
+    CONTACTO PROVEEDOR,
+    EMAIL CONTACTO PROV.,
+    TOTAL ORDEN,
+    CURRENCY,
+    CONDICIONES,
+    FACTURAR A.,
+    COMENTARIOS,
+    INSTRUCCIONES DE EMBARQUE
